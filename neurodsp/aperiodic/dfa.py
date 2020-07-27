@@ -138,6 +138,6 @@ def compute_detrended_fluctuation(sig, win_len, deg=1):
     _, fluc, _, _, _ = np.polyfit(np.arange(win_len), segments, deg=deg, full=True)
 
     # Convert to root-mean squared error, from squared error
-    det_fluc = np.mean((fluc / win_len)**0.5)
+    det_fluc = np.mean((fluc / win_len))**0.5
 
     return det_fluc
